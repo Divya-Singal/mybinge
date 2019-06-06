@@ -1,0 +1,119 @@
+<mat-toolbar color="primary" class="fixed-nav-bar">
+  <span>Application Title</span>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+
+  <span>Right Aligned Text</span>
+</mat-toolbar>
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide>
+    <img src='http://www.imgworlds.com/wp-content/uploads/2015/12/18-CONTACTUS-HEADER.jpg' alt="Random first slide">
+    <div class="carousel-caption">
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img src='http://www.imgworlds.com/wp-content/uploads/2015/12/18-CONTACTUS-HEADER.jpg' alt="Random second slide">
+    <div class="carousel-caption">
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img src='http://www.imgworlds.com/wp-content/uploads/2015/12/18-CONTACTUS-HEADER.jpg' alt="Random third slide">
+    <div class="carousel-caption">
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<div class="container  start-below">
+    <div class="row">
+      <div class="col-sm-4">
+        
+
+    <form class="example-form" [formGroup]='loginForm' (ngSubmit)='submit(loginForm)' >
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email/ Phone Number" type="text" formControlName="credential" >
+        </mat-form-field>
+        <br/>
+      
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Password" type="password" formControlName="password">
+        </mat-form-field>
+        <br/>
+  
+   
+        <button type="submit" class="btn btn-primary">Login</button>
+    
+  
+      </form>
+
+      </div>
+      <div class="col-sm-6">
+        <!-- <img src='http://www.imgworlds.com/wp-content/uploads/2015/12/18-CONTACTUS-HEADER.jpg' alt="Random first slide"> -->
+          <ngb-carousel *ngIf="images">
+              <ng-template ngbSlide>
+                <img src='http://www.imgworlds.com/wp-content/uploads/2015/12/18-CONTACTUS-HEADER.jpg' alt="Random first slide">
+                <div class="carousel-caption">
+                  <h3>First slide label</h3>
+                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+              </ng-template>
+              <ng-template ngbSlide>
+                <img src='http://www.imgworlds.com/wp-content/uploads/2015/12/18-CONTACTUS-HEADER.jpg' alt="Random second slide">
+                <div class="carousel-caption">
+                  <h3>Second slide label</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </ng-template>
+              <ng-template ngbSlide>
+                <img src='http://www.imgworlds.com/wp-content/uploads/2015/12/18-CONTACTUS-HEADER.jpg' alt="Random third slide">
+                <div class="carousel-caption">
+                  <h3>Third slide label</h3>
+                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+              </ng-template>
+            </ngb-carousel>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 pad">
+       WHAT IS IT
+      </div>
+      <div class="col-sm-4 pad">
+      
+
+      <form class="example-form" [formGroup]='registerForm' (ngSubmit)='submit(registerForm)' >
+
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="Full Name" type="text" formControlName="name">
+            </mat-form-field>
+            <br/>
+    
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email/ Phone Number" type="text" formControlName="credential" >
+          </mat-form-field>
+          <br/>
+        
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="Birth date" type="date" formControlName="birthDate">
+            </mat-form-field>
+            <br/>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Pick A Password" type="password" formControlName="password">
+          </mat-form-field>
+          <br/>
+          <button type="submit" class="btn btn-primary">Register</button>
+      
+    
+        </form>
+
+      </div>
+    </div>
+  </div>

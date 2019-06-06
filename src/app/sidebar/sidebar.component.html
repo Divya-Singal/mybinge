@@ -1,0 +1,38 @@
+<mat-card class="mgn-b">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://www.iafrica.com/wp-content/uploads/2019/01/Johnny-Depp-696x522.jpg"
+    alt="Photo of a Shiba Inu">
+</mat-card>
+
+<nav>
+  <ul>
+    <li [routerLink]="['/novels/add']">
+      <i class="material-icons">
+        add
+      </i>
+      New
+    </li>
+    <li [routerLink]="['/novels/list']">
+      <i class="material-icons">
+        list
+      </i>
+      List
+    </li>
+    <li [routerLink]="['/home']">
+      <i class="material-icons">
+        settings
+      </i>
+      Settings
+    </li>
+    <li [routerLink]="['/home']">
+      <i class="material-icons">
+        lock
+      </i>
+      Logout
+    </li>
+  </ul>
+</nav>

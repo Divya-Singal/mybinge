@@ -1,0 +1,68 @@
+
+      <form [formGroup]='newNovelForm' (ngSubmit)='submit(newNovelForm)'>
+          <mat-card class="mgn-b">
+            <div class="row">
+              <div class="col-lg-6">
+                <mat-form-field class="full-width">
+                  <input matInput placeholder="Title" formControlName="title">
+                </mat-form-field>
+                <br />
+                <mat-form-field class="full-width">
+                  <input matInput placeholder="Author" formControlName="author">
+                </mat-form-field>
+              </div>
+              <div class="col-lg-6">
+                <mat-form-field class="full-width">
+                  <input matInput placeholder="Start Date" formControlName="startDate">
+                </mat-form-field>
+                <br />
+                <mat-form-field class="full-width">
+                  <input matInput placeholder="End Date" formControlName="endDate">
+                </mat-form-field>
+              </div>
+            </div>
+        
+        
+            <div class="row">
+              <mat-form-field class="col-lg-12 full-width">
+                <textarea matInput placeholder="Notes" formControlName="comments"></textarea>
+              </mat-form-field>
+            </div>
+        
+            
+            <div class="borderme" formArrayName="quotes">
+              <div *ngFor="let item of Quotes.controls; let quoteIndex=index" [formGroupName]="quoteIndex">
+                <!-- <label>Page: </label>
+                <input formControlName="page"  placeholder="Page number" class="form-control" type="text" />
+             -->
+                <div class="row">
+                  <div class="col-lg-3">
+                    <mat-form-field class="full-width">
+                      <input matInput formControlName="page" placeholder="Page number">
+                    </mat-form-field>
+                  </div>
+                  <div class="col-lg-7">
+                    <mat-form-field class="full-width">
+                      <input matInput formControlName="takeaway" placeholder="Quote">
+                    </mat-form-field>
+                  </div>
+                  <div class="col-lg-2">
+                    <button type="button" class="btn btn-primary" (click)="deleteQuotes(quoteIndex)">Delete</button>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary" (click)="addQuotes()">Add Another Quote</button>
+            </div>
+         
+          <div class="row">
+            <div class="col-lg-6">
+              <ngb-rating [(rate)]="currentRate" class="joy" formControlName="rating"></ngb-rating>
+              <pre>Rate: <b>{{currentRate}}</b></pre>
+            </div>
+            <div class="col-lg-6">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </mat-card>
+        </form>
+

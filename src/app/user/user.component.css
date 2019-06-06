@@ -1,0 +1,22 @@
+.example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+
+  .fixed-nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    height: 45px;
+  }
+
+  .start-below {
+    padding-top: 46px;
+  }
+
+  .pad{
+      padding: 10px 10px 10px 10px;
+  }
